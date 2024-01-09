@@ -21,7 +21,9 @@ public class C01_ByClassName {
         //2- https://www.testotomasyonu.com/ adresine gidin
         driver.get("https://www.testotomasyonu.com/");
         //3- arama kutusuna phone yazip aratin
-        WebElement aramaKutusu = driver.findElement(By.id("global-search"));
+        // WebElement aramaKutusu = driver.findElement(By.id("global-search"));
+        WebElement aramaKutusu = driver.findElement(By.name("search"));
+
         aramaKutusu.sendKeys("phone" + Keys.ENTER);
         //4- Category bolumunde 8 element oldugunu test edin
         List<WebElement> categoryElementleriList = driver.findElements(By.className("panel-list"));
